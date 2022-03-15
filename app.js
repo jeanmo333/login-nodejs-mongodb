@@ -30,7 +30,7 @@ const corsOptions = {
       //el origin del request esta permitido
       callback(null, true);
     } else {
-      callback(new Error("no permitido por cors"));
+      callback(new Error("no permitido por cors."));
     }
   },
 };
