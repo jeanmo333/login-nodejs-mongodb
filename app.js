@@ -21,7 +21,7 @@ mongoose
   .catch((err) => console.log("DB CONNECTION ERROR", err));
 
 
-
+/*
 
 const dominiosPermitidos = [process.env.FRONTEND_URL];
 const corsOptions = {
@@ -35,11 +35,11 @@ const corsOptions = {
   },
 };
 
-
 app.use(cors(corsOptions));
+*/
 // middleware
 app.use(morgan("dev"));
-//app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
