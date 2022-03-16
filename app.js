@@ -21,25 +21,11 @@ mongoose
   .catch((err) => console.log("DB CONNECTION ERROR", err));
 
 
-/*
 
-const dominiosPermitidos = [process.env.FRONTEND_URL];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (dominiosPermitidos.indexOf(origin) !== -1) {
-      //el origin del request esta permitido
-      callback(null, true);
-    } else {
-      callback(new Error("no permitido por cors."));
-    }
-  },
-};
-
-app.use(cors(corsOptions));
-*/
 // middleware
 app.use(morgan("dev"));
-app.use(cors({ origin: true, credentials: true }));
+//app.use(cors({ origin: true, credentials: true }));
+app.use(cors());
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
