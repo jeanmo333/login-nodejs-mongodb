@@ -24,8 +24,8 @@ mongoose
 
 // middleware
 app.use(morgan("dev"));
-//app.use(cors({ origin: true, credentials: true }));
-app.use(cors());
+app.use(cors({ origin: false, credentials: false }));
+//app.use(cors());
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
